@@ -1,0 +1,28 @@
+name: Comercial
+description: Prospecção, proposta, follow-up, cliente ou piloto (use no repo kio-ops)
+labels: ["comercial"]
+body:
+  - type: input
+    id: cliente
+    attributes:
+      label: Cliente / lead
+      placeholder: "Clínica X, contato: nome (recepção)"
+    validations:
+      required: true
+  - type: textarea
+    id: acao
+    attributes:
+      label: Próxima ação
+      description: Uma ação concreta, com verbo. "Ligar", "enviar proposta", "agendar demo".
+    validations:
+      required: true
+  - type: input
+    id: prazo
+    attributes:
+      label: Até quando
+      placeholder: 2026-12-01
+  - type: textarea
+    id: historico
+    attributes:
+      label: Histórico e contexto
+      description: O que já foi conversado, valores, objeções. Atualize nos comentários a cada contato.

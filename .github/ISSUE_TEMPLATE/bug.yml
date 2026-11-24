@@ -1,0 +1,41 @@
+name: Bug
+description: Algo que funcionava e quebrou
+labels: ["bug"]
+body:
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: O que aconteceu
+      description: O que você viu, com print ou log se tiver.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que deveria acontecer
+    validations:
+      required: true
+  - type: textarea
+    id: reproduzir
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. Mandar "quero marcar amanhã" no WhatsApp da clínica demo
+        2. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: ambiente
+    attributes:
+      label: Onde
+      options:
+        - Produção (cliente real afetado)
+        - Staging
+        - Local
+    validations:
+      required: true
+  - type: input
+    id: afetado
+    attributes:
+      label: Quem foi afetado
+      description: Cliente/tenant, quantas pessoas, desde quando.

@@ -1,0 +1,38 @@
+name: Tarefa
+description: Funcionalidade, melhoria ou manutenção
+labels: ["feature"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: O que muda para o cliente ou para o time quando isso estiver pronto? (o porquê, não o como)
+    validations:
+      required: true
+  - type: textarea
+    id: criterio
+    attributes:
+      label: Critério de pronto
+      description: Como sabemos que acabou. Lista que dá para conferir.
+      placeholder: |
+        - [ ] Clínica consegue remarcar pelo WhatsApp
+        - [ ] Teste cobrindo remarcação com horário ocupado
+        - [ ] Rodando em staging
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto e links
+      description: Conversa com cliente, print, issue relacionada, decisão tomada.
+  - type: dropdown
+    id: tamanho
+    attributes:
+      label: Tamanho estimado
+      description: G = quebre em tarefas menores antes de começar.
+      options:
+        - P (até meio dia)
+        - M (até 2 dias)
+        - G (mais que isso)
+    validations:
+      required: true
